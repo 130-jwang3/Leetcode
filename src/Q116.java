@@ -1,16 +1,16 @@
-class Node {
+class Node1 {
     public int val;
-    public Node left;
-    public Node right;
-    public Node next;
+    public Node1 left;
+    public Node1 right;
+    public Node1 next;
 
-    public Node() {}
+    public Node1() {}
 
-    public Node(int _val) {
+    public Node1(int _val) {
         val = _val;
     }
 
-    public Node(int _val, Node _left, Node _right, Node _next) {
+    public Node1(int _val, Node1 _left, Node1 _right, Node1 _next) {
         val = _val;
         left = _left;
         right = _right;
@@ -26,10 +26,10 @@ start from the root and travel down
 5.return root;
  */
 public class Q116 {
-    public Node connect(Node root) {
-        Node root1=root;
+    public Node1 connect(Node1 root) {
+        Node1 root1=root;
         while(root1!=null){
-            Node cur=root1;
+            Node1 cur=root1;
             while(cur!=null){
                 if(cur.left!=null) cur.left.next=cur.right;
                 if(cur.right!=null && cur.next!=null) cur.right.next=cur.next.left;
